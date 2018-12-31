@@ -10,9 +10,7 @@ const SurveyNew = () => <h1>I am Servey new page</h1>;
 const Landing = () => <h1>I am Landing </h1>;
 
 class App extends Component {
-  componentDidMount() {
-    this.props.fetchUser();
-  }
+  componentDidMount() {}
   render() {
     return (
       <div className="container">
