@@ -1,18 +1,18 @@
-import "materialize-css/dist/css/materialize.min.css";
-import React, { Component } from "react";
-import { BrowserRouter, Route } from "react-router-dom";
-import { connect } from "react-redux";
-import * as actions from "../actions";
-import Header from "./Header";
-import Landing from "./Landing";
+import React, { Component } from 'react';
+import { BrowserRouter, Route } from 'react-router-dom';
+import { connect } from 'react-redux';
+import * as actions from '../actions';
 
-const Dashboard = () => <h1>I am Dashboard page</h1>;
-const SurveyNew = () => <h1>I am Servey new page</h1>;
+import Header from './Header';
+import Landing from './Landing';
+import Dashboard from './Dashboard';
+import SurveyNew from './surveys/SurveyNew';
 
 class App extends Component {
   componentDidMount() {
     this.props.fetchUser();
   }
+
   render() {
     return (
       <div className="container">
@@ -29,7 +29,4 @@ class App extends Component {
   }
 }
 
-export default connect(
-  null,
-  actions
-)(App);
+export default connect(null, actions)(App);
